@@ -1,0 +1,188 @@
+
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Intellivisa Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #f6f6f6, #ffffff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      flex-direction: column;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      width: 100px;
+    }
+
+    .title-section {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .title-section h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #1e1e1e;
+    }
+
+    .title-section p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    .login-container {
+      max-width: 500px;
+      width: 100%;
+      background: white;
+      padding: 30px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-group {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 30px;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    label span {
+      color: red;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 20px;
+      transition: border 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: #ff6b00;
+      outline: none;
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .password-wrapper .toggle-icon {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #999;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #ff6b00, #ff3300);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background: linear-gradient(to right, #e65c00, #cc2900);
+    }
+
+    .footer-text {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #aaa;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 480px) {
+      .login-container {
+        padding: 20px;
+      }
+
+      label {
+        font-size: 22px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        font-size: 16px;
+      }
+
+      .login-btn {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-wrapper">
+    <img src="/photos/logo-CWBD8D5V.png" alt="Intellivisa Logo" class="logo" />
+  </div>
+
+  <div class="title-section">
+    <h1>Intellivisa</h1>
+    <p>Sign in to your account to continue</p>
+  </div>
+
+  <div class="login-container">
+    <form>
+      <div class="form-group">
+        <label for="username">Username <span>*</span></label>
+        <input type="text" id="username" placeholder="Your username" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password <span>*</span></label>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Your password" required />
+          <span class="toggle-icon">👁️</span>
+        </div>
+      </div>
+
+      <button class="login-btn" type="submit">Sign In</button>
+    </form>
+  </div>
+
+  <p class="footer-text">© 2024 Intellivisa. All rights reserved</p>
+
+</body>
+</html>
+
